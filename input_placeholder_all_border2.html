@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <title>Document</title>
+    <style type="text/css">
+        html, body{
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+        }
+        h3{
+            margin: 0;
+            padding: 15px 5%;
+            background: #028c9a;
+            color: #fff;
+        }
+        .container{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            top: 25%;
+            position: absolute;
+        }
+        .input-container{
+            width : 30%;
+            height: auto;
+            position: relative;
+            display: inline-block;
+            padding: 2% 3%;
+            box-shadow: 0px 5px 20px 0px #cdcdcd;
+            border: 1px solid #cdcdcd;
+        }
+        .input-inner-container{
+            padding: 0px 0;
+            position: inherit;
+        }
+        .input{
+            border: 0;
+            font-size: medium;
+            padding: 3% 2%;
+            width: 96%;
+            box-shadow: 0px 0px 0px 3px #cdcdcdcd inset;
+        }
+        .input:focus{
+            outline: none;
+        }
+        /*Top*/
+        .top{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            top : 0;
+            left: 0;
+            background: #264da5;
+            display: inline-block;
+            transition: all 0.3s linear;
+        }
+        .input:focus ~ .top{
+            width: 100%;
+        }
+        /*Bottom*/
+        .bottom{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            bottom : 0;
+            right: 0;
+            background: #264da5;
+            display: inline-block;
+            transition: all 0.3s linear;
+        }
+        .input:focus ~ .bottom{
+            width: 100%;
+        }
+        /*Left*/
+        .left{
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 0%;
+            top : 0;
+            left: 0;
+            background: #264da5;
+            display: inline-block;
+            transition: all 0.3s linear;
+        }
+        .input:focus ~ .left{
+            height: 100%;
+        }
+        /*Right*/
+        .right{
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 0%;
+            bottom : 0;
+            right: 0;
+            background: #264da5;
+            display: inline-block;
+            transition: all 0.3s linear;
+        }
+        .input:focus ~ .right{
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Input & all border css animation #2</h3>
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <div class="input-inner-container">
+                <input type="text" class="input" required placeholder="Enter email id">
+                <span class="top"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
+                <span class="right"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
