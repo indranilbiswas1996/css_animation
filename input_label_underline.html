@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <title>Document</title>
+    <style type="text/css">
+        html, body{
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+        }
+        h3{
+            margin: 0;
+            padding: 15px 5%;
+            background: #028c9a;
+            color: #fff;
+        }
+        .container{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            top: 25%;
+            position: absolute;
+        }
+        .input-container{
+            width : 30%;
+            height: auto;
+            position: relative;
+            display: inline-block;
+            padding: 2% 3%;
+            box-shadow: 0px 5px 20px 0px #cdcdcd;
+            border: 1px solid #cdcdcd;
+        }
+        .input-inner-container{
+            padding: 10px 0;
+            position: inherit;
+        }
+        .input{
+            border: 0;
+            font-size: medium;
+            padding: 1.5% 0;
+            width: 100%;
+            border-bottom: 3px solid #cdcdcdd3;
+        }
+        .input:focus{
+            outline: none;
+        }
+        .label{
+            float: left;
+            position: absolute;
+            bottom: 17px;
+            left: 0;
+            transition: all 0.3s linear;
+            cursor: text;
+        }
+        /* Left */
+        .left:focus ~ .label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+        .left-underline{
+            border-bottom: 3px solid #264da5;
+            width: 0%;
+            display: inline-block;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            transition: all 0.3s linear;
+        }
+        .left:focus ~ .left-underline{
+            width: 100%;
+        }
+        #f_name:valid +.label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+        /* Middle */
+        .middle:focus ~ .label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+        .middle-underline{
+            border-bottom: 3px solid #264da5;
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            transition: all 0.3s linear;
+            transform: scale(0, 1);
+        }
+        .middle:focus ~ .middle-underline{
+            transform: scale(1);
+        }
+        #l_name:valid +.label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+        /* Right */
+        .right:focus ~ .label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+        .right-underline{
+            border-bottom: 3px solid #264da5;
+            width: 0%;
+            display: inline-block;
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            transition: all 0.3s linear;
+        }
+        .right:focus ~ .right-underline{
+            width: 100%;
+        }
+        #email:valid +.label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+        /* Left-Right */
+        .left-right-underline::after,
+        .left-right-underline::before{
+            content: "";
+            width: 0%;
+            left: 0;
+            bottom: 10px;
+            height: 3px;
+            background: #264da5;
+            display: inline-block;
+            position: absolute;
+            transition: all 0.3s linear;
+        }
+        .left-right-underline::after{
+            right: 0;
+            left: auto;
+        }
+        .left-right:focus ~ .label{
+            bottom: 40px;
+            font-size: small;
+            font-weight: bold;
+        }
+        .left-right:focus ~.left-right-underline::before,
+        .left-right:focus ~.left-right-underline::after{
+            width: 51%;
+        }
+        #phone:valid + .label{
+            bottom: 40px;
+            font-weight: bold;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Input, label & border css animation</h3>
+    </header>
+    <div class="container">        
+        <div class="input-container">            
+            <div class="input-inner-container">
+                <input type="text" class="input left" id="f_name" required>
+                <label class="label" for="f_name">Enter first name</label>
+                <span class="left-underline"></span>
+            </div>
+            <div class="input-inner-container">
+                <input type="text" class="input middle" id="l_name" required>
+                <label class="label" for="l_name">Enter last name</label>
+                <span class="middle-underline"></span>
+            </div>
+            <div class="input-inner-container">
+                <input type="text" class="input right" id="email" required>
+                <label class="label" for="email">Enter email id</label>
+                <span class="right-underline"></span>
+            </div>
+            <div class="input-inner-container">
+                <input type="text" class="input left-right" id="phone" required>
+                <label class="label" for="phone">Enter phone number</label>
+                <span class="left-right-underline"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
