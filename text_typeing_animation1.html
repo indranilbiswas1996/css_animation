@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        html, body{
+            margin: 0;
+            background: #000;
+            font-family: "Courier";
+        }
+        h3{
+            margin: 0;
+            padding: 15px 5%;
+            background: #101010;
+            color: #fff;
+        }
+        .container{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            top: 25%;
+            position: absolute;
+        }
+        .input-container{
+            height: auto;
+            position: relative;
+            display: inline-block;
+        }
+        p{
+            width: 100%;
+            text-align: center;
+            color: #00ff00;
+            font-size: large;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: type 4s steps(60, end);
+        }
+        p a{
+            color: #0095ff;
+        }
+        p:nth-child(2){
+            animation: type2 8s steps(60, end);
+        }
+        span{
+            animation: blink 1s infinite;
+        }
+        @keyframes type{
+            from {
+                width: 0;
+            }
+            to {
+                width: 100;
+            }
+        }
+        @keyframes type2{
+            0%{
+                width: 0;
+            }
+            50%{
+                width: 0;
+            }
+            100%{
+                width: 100;
+            }
+        }
+        @keyframes blink{
+            to{opacity: .0;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Text typing css animation #1</h3>
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <p>Hi friends, this is text typing animation using pure CSS</p>
+            <p>created by 
+                <a href="https://github.com/indranilbiswas1996" target="_blank" title="Indranil Biswas">@Indranil</a>
+                <span>|</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
